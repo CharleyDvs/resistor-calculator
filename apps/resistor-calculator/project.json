@@ -1,0 +1,8 @@
+{
+  "name": "resistor-calculator",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/resistor-calculator/src",
+  "projectType": "application",
+  "targets": {},
+  "tags": []
+}
