@@ -1,0 +1,42 @@
+.tabs-trigger {
+  border: none;
+  background: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  position: relative;
+  color: rgba(0, 0, 0, .5);
+  font-weight: 600;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 20%;
+    transition: all .3s ease;
+  }
+
+  &:not(:last-child)::before {
+    height: 50%;
+    width: 1px;
+    bottom: 25%;
+    right: 0;
+    background-color: rgba(0, 0, 0, .2);
+  }
+
+  &::after {
+    height: 2px;
+    width: 0%;
+    bottom: -4px;
+    left: 20%;
+    background-color: purple;
+  }
+
+  &[data-state='active'] {
+    color: purple;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+
+    &::after {
+      width: 60%;
+    }
+  }
+}

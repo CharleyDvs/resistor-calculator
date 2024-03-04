@@ -13,7 +13,7 @@ export interface ListItemProps
   color: string;
 }
 
-export const ListItem = ({
+export const DropdownMenuListItem = ({
   color,
   checked,
   children,

@@ -31,6 +31,7 @@ export const FullExample = () => {
       <BandColorDropdown.List>
         {DEFAULT_VALUES.map(({ value, label }) => (
           <BandColorDropdown.ListItem
+            key={value}
             color={value}
             onCheckedChange={() => setColorValue(value)}
             checked={value=== colorValue}

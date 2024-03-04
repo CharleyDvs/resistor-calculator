@@ -14,7 +14,7 @@ export const FullExample = () => {
   return (
     <Card>
       <Card.Header>
-        <h1 style={{ paddingLeft: 24, margin: 0 }}>Card Header</h1>
+        <h1 style={{ padding: 24, margin: 0 }}>Card Header</h1>
       </Card.Header>
       <Card.Body>
         <span>

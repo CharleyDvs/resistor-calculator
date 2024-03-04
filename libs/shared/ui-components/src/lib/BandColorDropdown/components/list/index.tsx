@@ -9,7 +9,7 @@ interface TriggerProps {
   children: React.ReactNode;
 }
 
-export const List = ({ children }: TriggerProps) => {
+export const DropdownMenuList = ({ children }: TriggerProps) => {
   return (
     <DropdownMenu.Portal>
       <DropdownMenu.Content className={cx('option-list')}>{children}</DropdownMenu.Content>

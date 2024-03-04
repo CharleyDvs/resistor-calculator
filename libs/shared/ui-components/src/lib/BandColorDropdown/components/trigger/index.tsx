@@ -9,7 +9,7 @@ interface TriggerProps {
   color?: string;
 }
 
-export const Trigger = ({ color= '#000' }: TriggerProps) => {
+export const DropdownMenuTrigger = ({ color= '#000' }: TriggerProps) => {
   return (
     <DropdownMenu.Trigger asChild>
       <div className={cx('band-color')} style={{ backgroundColor: color }} />
