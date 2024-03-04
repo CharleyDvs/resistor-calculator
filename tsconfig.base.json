@@ -17,7 +17,8 @@
     "paths": {
       "@resistor-calculator/ui-components": [
         "libs/shared/ui-components/src/index.ts"
-      ]
+      ],
+      "@resistor-calculator/utilities": ["libs/shared/utilities/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
