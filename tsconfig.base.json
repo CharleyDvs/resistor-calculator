@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@resistor-calculator/calculator-view": [
+        "libs/views/calculator-view/src/index.tsx"
+      ],
       "@resistor-calculator/ui-components": [
         "libs/shared/ui-components/src/index.ts"
       ],

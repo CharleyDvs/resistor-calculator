@@ -1,14 +1,7 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
-
-import NxWelcome from './nx-welcome';
+import { CalculatorView } from '@resistor-calculator/calculator-view';
 
 export function App() {
-  return (
-    <div>
-      <NxWelcome title="resistor-calculator" />
-    </div>
-  );
+  return <CalculatorView />;
 }
 
 export default App;
