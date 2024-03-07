@@ -1,0 +1,8 @@
+.calculator-container {
+  padding-top: 12px;
+  display: grid;
+  grid-template-areas: 
+            "selector legend"
+            "selector legend"
+            "dataCard dataCard";
+}

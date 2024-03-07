@@ -2,7 +2,7 @@ import type { Meta } from '@storybook/react';
 import { Tabs } from '.';
 import { Card } from '../Card';
 
-import { FullExample as BandColorDExample } from '../BandColorDropdown/documentation.stories';
+import { FullExample as BandColorExample } from '../BandColorDropdown/documentation.stories';
 
 const meta: Meta<typeof Tabs> = {
   component: Tabs,
@@ -45,8 +45,8 @@ export const FullExample = () => {
                 paddingTop: '24px',
               }}
             >
-              <BandColorDExample />
-              <BandColorDExample />
+              <BandColorExample />
+              <BandColorExample />
             </div>
           </Tabs.Content>
           <Tabs.Content value="tab3">
