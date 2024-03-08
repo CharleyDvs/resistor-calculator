@@ -1,30 +1,18 @@
-import { useState } from 'react';
 import classNames from 'classnames/bind';
 import { useTranslation } from 'react-i18next';
 
 import { Tabs } from '@resistor-calculator/ui-components';
+import { useResistorCalculator } from '@resistor-calculator/ui-hooks';
 
 import { DataCard, ValueSelector, ValueLegend } from './sections';
-
-import { BandValue } from './types';
 
 import styles from './styles.module.scss';
 
 const cx = classNames.bind(styles);
 
-const resistorData = {
-  resistance: '12,0000',
-  tolerance: '+/- 10%',
-};
-
 export const CalculatorView = () => {
   const { t } = useTranslation('translation', { keyPrefix: 'calculator-view' });
-  const [bandValues, setBandValues] = useState<BandValue[]>([
-    'black',
-    'black',
-    'black',
-    'black',
-  ]);
+  const { bandValues, setBandValues, resistorInfo } = useResistorCalculator();
 
   return (
     <>
@@ -41,7 +29,7 @@ export const CalculatorView = () => {
               setBandValues={setBandValues}
             />
             <ValueLegend bandValues={bandValues} />
-            <DataCard title="Resistor Values" resistorData={resistorData} />
+            <DataCard title="Resistor Values" infoToDisplay={resistorInfo} />
           </div>
         </Tabs.Content>
         <Tabs.Content value="5bands">
