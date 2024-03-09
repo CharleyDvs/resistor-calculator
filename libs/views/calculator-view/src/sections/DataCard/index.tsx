@@ -8,11 +8,12 @@ const cx = classNames.bind(styles);
 
 interface DataCardProps {
   title: string;
-  resistorData: { [key: string]: string };
+  infoToDisplay: { [key: string]: string };
 }
 
-export const DataCard = ({ title, resistorData }: DataCardProps) => {
-  const resistorDataToDisplay = Object.entries(resistorData);
+export const DataCard = ({ title, infoToDisplay }: DataCardProps) => {
+  const dataToDisplay = Object.entries(infoToDisplay);
+
   return (
     <div className={cx('resistor-data')}>
       <Card>
@@ -20,7 +21,7 @@ export const DataCard = ({ title, resistorData }: DataCardProps) => {
           <h2>{title}</h2>
         </Card.Header>
         <Card.Body>
-          {resistorDataToDisplay.map(([key, value]) => (
+          {dataToDisplay.map(([key, value]) => (
             <div key={key}>
               <span>{key}:</span>
               <span>{value}</span>

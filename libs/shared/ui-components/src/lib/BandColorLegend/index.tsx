@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 interface BandColorLegendProps {
   color: string;
   legend: string;
-  value: number;
+  value: string;
 }
 
 export const BandColorLegend = ({
@@ -20,7 +20,7 @@ export const BandColorLegend = ({
       <div className={cx('color-display')} style={{ backgroundColor: color }} />
       <span>{legend}</span>
       <span>
-        <i>{value}Ω</i>
+        <i>{value}</i>
       </span>
     </div>
   );

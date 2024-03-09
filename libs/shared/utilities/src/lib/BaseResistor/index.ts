@@ -1,8 +1,8 @@
-type ResistorConfig = {
+export type ResistorConfig = {
   type: string;
-  values: {
+  values: Partial<{
     [key: string]: string;
-  };
+  }>;
 };
 
 export class BaseResistor {
@@ -12,7 +12,7 @@ export class BaseResistor {
     this.config = config;
   }
 
-  calculateValues(bandColors: string) {
+  calculateValues(bandColors: string[]) {
     const resistorValues: { [key: string]: string } = {};
 
     this.config.forEach(({ type, values }, idx) => {
@@ -23,7 +23,7 @@ export class BaseResistor {
           type
         ] = `${resistorValues[type]}${values[currentBandColor]}`;
       } else {
-        resistorValues[type] = values[currentBandColor];
+        resistorValues[type] = values[currentBandColor] ?? 'N/A';
       }
     });
 

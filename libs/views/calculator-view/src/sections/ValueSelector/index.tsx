@@ -1,9 +1,7 @@
 import classNames from 'classnames/bind';
 
 import { BandColorDropdown } from '@resistor-calculator/ui-components';
-import { REGULAR_BAND_COLORS } from '@resistor-calculator/utilities';
-
-import { BandValue } from '../../types';
+import { REGULAR_BAND_COLORS, BandValue } from '@resistor-calculator/utilities';
 
 import styles from './styles.module.scss';
 
