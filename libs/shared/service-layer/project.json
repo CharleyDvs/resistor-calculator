@@ -1,0 +1,8 @@
+{
+  "name": "service-layer",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/service-layer/src",
+  "projectType": "library",
+  "targets": {},
+  "tags": []
+}
