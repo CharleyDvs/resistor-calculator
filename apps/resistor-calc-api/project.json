@@ -1,0 +1,24 @@
+{
+  "name": "resistor-calc-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/resistor-calc-api/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "resistor-calc-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "resistor-calc-api:build:development"
+        },
+        "production": {
+          "buildTarget": "resistor-calc-api:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
