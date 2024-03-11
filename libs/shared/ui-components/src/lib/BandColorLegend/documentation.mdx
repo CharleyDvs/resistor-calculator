@@ -1,0 +1,20 @@
+import { Canvas, Meta } from '@storybook/addon-docs';
+
+import * as BandColorLegendStories from './documentation.stories';
+
+<Meta of={BandColorLegendStories} />
+
+# BandColorLegend
+
+The **`<BandColorLegend />`** component displays a small square with the related color alongside with a legend string and the value represented by the color as shown in the example below.
+
+  ```tsx
+  `main props:`
+  color: string; // This color will be displayed in the component, it should be a valid css background color value
+  legend: string; // This text will be displayed as the main text in the component
+  value: string; // This is the value, it's a string that will be displayed in the right side of the component
+  ```
+
+## Example
+
+<Canvas of={BandColorLegendStories.FullExample} />
