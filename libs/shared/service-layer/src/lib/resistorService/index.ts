@@ -1,11 +1,17 @@
+import { AxiosResponse } from 'axios';
+
 import { instance as axios } from '../axiosInstance';
 
-const getResistorConfig = async (bands: string) => {
-  return axios.get(`/resistorConfig/${bands}`);
+import { CONFIG_URL, TYPES_URL } from '@resistor-calculator/constants';
+
+import { ResistorTypes, ResistorBandConfig } from '@resistor-calculator/types';
+
+const getResistorConfig = async (bands: string): Promise<AxiosResponse<ResistorBandConfig[]>> => {
+  return axios.get(`/resistor${CONFIG_URL}/${bands}`);
 };
 
-const getResistorTypes = async () => {
-  return axios.get('/resistorTypes');
+const getResistorTypes = async (): Promise<AxiosResponse<ResistorTypes[]>> => {
+  return axios.get(`/resistor${TYPES_URL}`);
 };
 
 export const resistorService = {

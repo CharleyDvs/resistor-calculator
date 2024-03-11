@@ -8,7 +8,7 @@ export const useGetResistorTypes = () => {
   const result = useQuery({
     queryKey: ['resistorTypes'],
     queryFn: async () => {
-      const data = await getResistorTypes();
+      const { data } = await getResistorTypes();
 
       return data;
     },

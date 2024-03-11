@@ -1,14 +1,14 @@
 import classNames from 'classnames/bind';
 
 import { BandColorLegend } from '@resistor-calculator/ui-components';
-import { ResistorConfig, BandValue } from '@resistor-calculator/utilities';
+import { BandValue, ResistorBandConfig } from '@resistor-calculator/types';
 
 import styles from './styles.module.scss';
 
 const cx = classNames.bind(styles);
 
 interface ValueLegendProps {
-  resistorData?: ResistorConfig[];
+  resistorData?: ResistorBandConfig[];
   bandValues?: BandValue[];
 }
 

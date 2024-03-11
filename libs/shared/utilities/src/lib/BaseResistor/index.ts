@@ -6,7 +6,7 @@ export type ResistorConfig = {
 };
 
 export class BaseResistor {
-  config: ResistorConfig[];
+  config: ResistorConfig[] | [];
 
   constructor(config: ResistorConfig[]) {
     this.config = config;
