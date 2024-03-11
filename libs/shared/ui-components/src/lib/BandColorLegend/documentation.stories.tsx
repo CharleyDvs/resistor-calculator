@@ -12,19 +12,31 @@ export default meta;
 
 const DEFAULT_VALUES = [
   {
-    value: 1,
+    value: '1',
+    legend: 'significant value',
+    color: 'brown',
+  },
+  {
+    value: '0',
+    legend: 'significant value',
     color: 'black',
   },
   {
-    value: 10,
-    color: 'brown',
+    value: '+/- 2%',
+    legend: 'tolerance',
+    color: 'red',
   },
 ];
 
 export const FullExample = () => (
   <>
-    {DEFAULT_VALUES.map(({ value, color }) => (
-      <BandColorLegend key={value} color={color} legend={color} value={value} />
+    {DEFAULT_VALUES.map(({ color, legend, value }) => (
+      <BandColorLegend
+        key={value}
+        color={color}
+        legend={legend}
+        value={value}
+      />
     ))}
   </>
 );

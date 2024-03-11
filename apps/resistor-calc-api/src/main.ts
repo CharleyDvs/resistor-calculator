@@ -39,5 +39,5 @@ app.use((err, _, res, _next) => {
 app.use('/resistor', resistorRoutes);
 
 app.listen(PORT, () => {
-  console.log(`Listening at http://localhost:${PORT}/api`);
+  console.log(`Listening at http://localhost:${PORT}`);
 });

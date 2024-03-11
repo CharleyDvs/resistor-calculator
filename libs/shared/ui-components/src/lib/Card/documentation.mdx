@@ -1,0 +1,21 @@
+import { Canvas, Meta } from '@storybook/addon-docs';
+
+import * as CardStories from './documentation.stories';
+
+<Meta of={CardStories} />
+
+# Card
+
+The **`<Card />`** component is a color selector dropdown that displays all the available colors for a resistor's band.
+
+## Subcomponents
+
+- **Card:** _`({children: React.Reactnode}) => JSX.Element`_ This is the root component mainly used to wrap the rest of the Subcomponents
+
+- **Card.Header:** __`({children: React.Reactnode}) => JSX.Element`__ This is a wrapper, whatever content is inside will be displayed as part of the _Card's_ header.
+
+- **Card.Body:** __`({children: React.Reactnode}) => JSX.Element`__ This wrapper will display it's content as part of the _Card's_ body. It already has a padding set.
+
+## Example
+
+<Canvas of={CardStories.FullExample} />
