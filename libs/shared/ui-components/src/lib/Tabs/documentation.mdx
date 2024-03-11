@@ -1,0 +1,41 @@
+import { Canvas, Meta } from '@storybook/addon-docs';
+
+import * as TabsStories from './documentation.stories';
+
+<Meta of={TabsStories} />
+
+# Tabs
+
+The **`<Tabs />`** component is a wrapper that allows the user to decide which view is visible.
+
+## Subcomponents
+
+- **Tabs:** _`(props) => JSX.Element`_ This is the root component mainly used to wrap the rest of the Subcomponents
+
+  ```tsx
+  `main props:`
+  children: React.ReactNode;
+  defaultValue: string; // This is the initial tab that will be displayed, it should be the same as one of the tabs
+  ```
+
+- **Tabs.List:** _`({children: React.Reactnode}) => JSX.Element` This compponent is a wrapper for the _Trigger_ components which will allow the user to decide which _Tab_ is active 
+
+- **Tabs.Trigger:** _`(props) => JSX.Element`_ This is a wrapper for all the _Triggers_ tha control which view is currently active
+
+  ```tsx
+  `main props:`
+  children: React.ReactNode;
+  value: string; // This value will be set as the active tab if the user clicks on the trigger
+  ```
+
+- **Tabs.Content:** _`(props) => JSX.Element`_ This component is the wrapper for all the content that will be displayed if the tab is active
+
+  ```tsx
+  `main props:`
+  children: React.ReactNode;
+  value: string; // If this value is the same as the selected value, the content of this component will be displayed
+  ```
+
+## Example
+
+<Canvas of={TabsStories.FullExample} />
