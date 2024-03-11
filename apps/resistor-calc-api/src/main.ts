@@ -1,6 +1,9 @@
 import express from 'express';
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
+import cors from 'cors';
+
+import {API_PORT} from '@resistor-calculator/constants'
 
 import { resistorRoutes } from './routes/resistorRoutes';
 
@@ -8,10 +11,12 @@ import { swaggerOptions } from './documentation/swaggerOptions';
 
 import * as path from 'path';
 
-const PORT = process.env.PORT || 3333;
+const PORT = process.env.PORT || API_PORT;
 
 const app = express();
 const specs = swaggerJsdoc(swaggerOptions);
+
+app.use(cors())
 
 // Documentation
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(specs));
@@ -39,5 +44,5 @@ app.use((err, _, res, _next) => {
 app.use('/resistor', resistorRoutes);
 
 app.listen(PORT, () => {
-  console.log(`Listening at http://localhost:${PORT}`);
+  console.log(`Listening at http://localhost:${PORT}/api`);
 });

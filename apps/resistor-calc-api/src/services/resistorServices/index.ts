@@ -1,5 +1,7 @@
-const CONFIG_MOCK = {
-  0: {
+import { ResistorTypes, ResistorBandConfig } from '@resistor-calculator/types';
+
+const CONFIG_MOCK: ResistorBandConfig[] = [
+  {
     type: 'significantValue',
     values: {
       black: '0',
@@ -14,7 +16,7 @@ const CONFIG_MOCK = {
       white: '9',
     },
   },
-  1: {
+  {
     type: 'significantValue',
     values: {
       black: '0',
@@ -29,7 +31,7 @@ const CONFIG_MOCK = {
       white: '9',
     },
   },
-  2: {
+  {
     type: 'multiplier',
     values: {
       black: 'x10^0',
@@ -44,7 +46,7 @@ const CONFIG_MOCK = {
       white: 'x10^9',
     },
   },
-  3: {
+  {
     type: 'tolerance',
     values: {
       brown: '+/- 1%',
@@ -58,24 +60,33 @@ const CONFIG_MOCK = {
       white: 'x10^9',
     },
   },
-};
+];
 
-export const getResistorConfig = (bands: string) => {
-  if (bands === '4') {
-    return { data: CONFIG_MOCK };
+export const getResistorConfig = (bandNumber: string): ResistorBandConfig[] => {
+  if (bandNumber === '4') {
+    return CONFIG_MOCK;
   }
 
-  return {
-    data: {
-      ...CONFIG_MOCK,
+  return [
+    {
+      type: 'significantValue',
+      values: {
+        black: '0',
+        brown: '1',
+        red: '2',
+        orange: '3',
+        yellow: '4',
+        green: '5',
+        blue: '6',
+        violet: '7',
+        gray: '8',
+        white: '9',
+      },
     },
-  };
+    ...CONFIG_MOCK,
+  ];
 };
 
-export const getResistorTypes = () => {
-  return {
-    data: {
-      bands: ['3', '4'],
-    },
-  };
+export const getResistorTypes = (): ResistorTypes[] => {
+  return ['4', '5'];
 };

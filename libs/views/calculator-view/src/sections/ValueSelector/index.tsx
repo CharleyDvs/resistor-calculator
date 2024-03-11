@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 
 import { BandColorDropdown } from '@resistor-calculator/ui-components';
-import { REGULAR_BAND_COLORS, BandValue } from '@resistor-calculator/utilities';
+import { BAND_COLORS, BandValue } from '@resistor-calculator/types';
 
 import styles from './styles.module.scss';
 
@@ -13,7 +13,7 @@ interface ValueSelectorProps {
 }
 
 const bandColorOptions: { value: BandValue; label: string }[] =
-  REGULAR_BAND_COLORS.map((color) => ({
+  BAND_COLORS.map((color) => ({
     value: color,
     label: color,
   }));
