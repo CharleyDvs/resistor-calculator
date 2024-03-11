@@ -1,0 +1,42 @@
+import { Canvas, Meta } from '@storybook/addon-docs';
+
+import * as BandColorDropdownStories from './documentation.stories';
+
+<Meta of={BandColorDropdownStories} />
+
+# BandColorDropdown
+
+The **`<BandColorDropdown />`** component is a color selector dropdown that displays all the available colors for a resistor's band.
+
+## Subcomponents
+
+- **BandColorDropdown:** _`({children: React.Reactnode}) => JSX.Element`_ This is the root component mainly used to wrap the rest of the Subcomponents
+
+- **BandColorDropdown.Trigger:** _`(props) => JSX.Element`_ This compponent is a colored square that displays the current selected color.
+  This component also controls the display of the _List_ subcomponent, when clicked it will trigger the display of the _List_
+
+  ```tsx
+  `main props:`
+  color: string; // This string should be a valid css background color value
+  ```
+
+- **BandColorDropdown.List:** _`(props) => JSX.Element`_ This is a wrapper for all the components that will be displayed once the _Trigger_ is clicked.
+  Usually the children elements will be _ListItems_
+
+  ```tsx
+  `main props:`
+  children: React.ReactNode;
+  ```
+
+- **BandColorDropdown.ListItem:** _`(props) => JSX.Element`_ This component will display an option that the user can click to change the value of the component 
+
+  ```tsx
+  `main props:`
+  color: string; // This string will affect the color displayed, this should be a valid css background color value
+  onCheckedChange: () => void // This callback will be fired when the user clicks on the item
+  checked: boolean // This will affect the styles of the component to show if the item is selected
+  ```
+
+## Example
+
+<Canvas of={BandColorDropdownStories.FullExample} />
