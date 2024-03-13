@@ -5,3 +5,59 @@
   align-items: center;
   justify-content: center;
 }
+
+.resistor-band {
+  position: relative;
+  margin-bottom: 10px;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 52px;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: blanchedalmond;
+    pointer-events: none;
+    left: 0;
+  }
+
+  &::after {
+    top: -10px;
+  }
+
+  &::before {
+    bottom: -10px;
+  }
+}
+
+.resistor-end {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  z-index: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    height: 58px;
+    width: 58px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: blanchedalmond;
+  }
+
+  &:last-of-type {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: none;
+
+    &::after {
+      top: -25px;
+    }
+  }
+}

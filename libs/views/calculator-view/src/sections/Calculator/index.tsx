@@ -26,7 +26,7 @@ export const Calculator = ({ bandNumber }: CalculatorProps) => {
   return (
     <div className={cx('calculator-container')}>
       <ValueSelector bandValues={bandValues} setBandValues={setBandValues} />
-      {/* <ValueLegend resistorData={CONFIG_MOCK} bandValues={bandValues} /> */}
+      <ValueLegend resistorData={resistorConfig} bandValues={bandValues} />
       <DataCard title="Resistor Values" infoToDisplay={resistorInfo} />
     </div>
   );

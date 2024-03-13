@@ -1,5 +1,11 @@
 .band-color {
   height: 18px;
-  width: 54px;
+  width: 52px;
   border: 1px solid black;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }

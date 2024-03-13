@@ -15,10 +15,10 @@ export const DataCard = ({ title, infoToDisplay }: DataCardProps) => {
   const dataToDisplay = Object.entries(infoToDisplay);
 
   return (
-    <div className={cx('resistor-data')}>
+    <div className={cx('data-card')}>
       <Card>
         <Card.Header>
-          <h2>{title}</h2>
+          <h2 className={cx('data-card-title')}>{title}</h2>
         </Card.Header>
         <Card.Body>
           {dataToDisplay.map(([key, value]) => (

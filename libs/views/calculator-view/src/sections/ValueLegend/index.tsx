@@ -19,10 +19,10 @@ export const ValueLegend = ({ resistorData, bandValues }: ValueLegendProps) => {
         bandValues &&
         resistorData.map(({ values, type }, index) => {
           const currentColor = bandValues[index];
-          
+
           return (
             <BandColorLegend
-              key={currentColor + index}
+              key={currentColor + 'legend' + index}
               color={currentColor}
               legend={type}
               value={values[currentColor] || 'N/A'}
