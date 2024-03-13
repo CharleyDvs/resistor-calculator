@@ -12,11 +12,12 @@ interface ValueSelectorProps {
   setBandValues: React.Dispatch<React.SetStateAction<BandValue[]>>;
 }
 
-const bandColorOptions: { value: BandValue; label: string }[] =
-  BAND_COLORS.map((color) => ({
+const bandColorOptions: { value: BandValue; label: string }[] = BAND_COLORS.map(
+  (color) => ({
     value: color,
     label: color,
-  }));
+  })
+);
 
 export const ValueSelector = ({
   bandValues,
@@ -24,9 +25,12 @@ export const ValueSelector = ({
 }: ValueSelectorProps) => {
   return (
     <div className={cx('value-selector')}>
+      <div className={cx('resistor-end')} />
       {bandValues.map((color, index) => (
         <BandColorDropdown key={color + index}>
-          <BandColorDropdown.Trigger color={color} />
+          <div className={cx('resistor-band')}>
+            <BandColorDropdown.Trigger color={color} />
+          </div>
           <BandColorDropdown.List>
             {bandColorOptions.map(({ value, label }) => (
               <BandColorDropdown.ListItem
@@ -45,6 +49,7 @@ export const ValueSelector = ({
           </BandColorDropdown.List>
         </BandColorDropdown>
       ))}
+      <div className={cx('resistor-end')} />
     </div>
   );
 };

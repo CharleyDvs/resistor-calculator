@@ -85,5 +85,8 @@
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0",
     "tslib": "^2.3.0"
+  },
+  "scripts": {
+    "start": "nx run-many --parallel --target=serve --projects=resistor-calculator,resistor-calc-api"
   }
 }
