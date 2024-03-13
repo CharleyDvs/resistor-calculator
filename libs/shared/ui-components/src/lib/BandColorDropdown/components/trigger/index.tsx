@@ -11,7 +11,7 @@ interface TriggerProps {
 
 export const DropdownMenuTrigger = ({ color= '#000' }: TriggerProps) => {
   return (
-    <DropdownMenu.Trigger asChild>
+    <DropdownMenu.Trigger asChild role='combobox'>
       <div className={cx('band-color')} style={{ backgroundColor: color }} />
     </DropdownMenu.Trigger>
   );

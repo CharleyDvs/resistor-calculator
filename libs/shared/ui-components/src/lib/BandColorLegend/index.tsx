@@ -17,7 +17,7 @@ export const BandColorLegend = ({
 }: BandColorLegendProps) => {
   return (
     <div className={cx('color-display-container')}>
-      <div className={cx('color-display')} style={{ backgroundColor: color }} />
+      <div className={cx('color-display')} style={{ backgroundColor: color }} data-testid={`color-display-${color}`} />
       <span>{legend}</span>
       <span>
         <i>{value}</i>
