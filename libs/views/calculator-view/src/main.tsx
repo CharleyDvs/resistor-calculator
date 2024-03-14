@@ -21,13 +21,13 @@ export const CalculatorView = () => {
         <Tabs defaultValue={resistorTypes[0]}>
           <Tabs.List>
             {resistorTypes.map((resistorType, index) => (
-              <Tabs.Trigger key={resistorType + index} value={resistorType}>
+              <Tabs.Trigger key={'tab'+ resistorType + index} value={resistorType}>
                 {resistorType} bands resistor
               </Tabs.Trigger>
             ))}
           </Tabs.List>
           {resistorTypes.map((resistorType, index) => (
-            <Tabs.Content key={resistorType + index} value={resistorType}>
+            <Tabs.Content key={'tab-content'+ resistorType + index} value={resistorType}>
               <Calculator bandNumber={resistorType} />
             </Tabs.Content>
           ))}

@@ -3,7 +3,19 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "apps/resistor-calculator-e2e/src",
-  "targets": {},
+  "targets": {
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx serve resistor-calc-api",
+          "nx e2e resistor-calculator-e2e",
+          "echo Done!"
+        ],
+        "readyWhen": "Done!"
+      }
+    }
+  },
   "implicitDependencies": ["resistor-calculator"],
   "tags": []
 }
