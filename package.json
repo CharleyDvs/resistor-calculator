@@ -90,6 +90,7 @@
     "start": "nx run-many --parallel --target=serve --projects=resistor-calculator,resistor-calc-api",
     "storybook": "nx run ui-components:storybook",
     "test:unit": "nx run-many -t test -p ui-components utilities",
-    "test:e2e": "nx run resistor-calculator-e2e:test"
+    "test:e2e": "nx run resistor-calculator-e2e:test",
+    "generate:tokens": "style-dictionary build --config sd.config.js"
   }
 }
