@@ -1,4 +1,4 @@
-import { render, screen,  } from '@testing-library/react';
+import { render, screen, act } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
 
 import { BandColorDropdown } from '.';
@@ -10,7 +10,7 @@ describe('BandColorDropdown', () => {
     { value: 'brown', label: testLegend + 'Brown' },
     { value: 'white', label: testLegend + 'White' },
   ];
-  const mockFn = jest.fn()
+  const mockFn = jest.fn();
 
   const TestComponent = () => {
     return (
@@ -58,7 +58,9 @@ describe('BandColorDropdown', () => {
 
     const listItem = await screen.findAllByText(testLegend, { exact: false });
 
-    await userEvent.click(listItem[1]);
+    await act(async () => {
+      await userEvent.click(listItem[1]);
+    });
 
     expect(mockFn).toHaveBeenCalled();
   });

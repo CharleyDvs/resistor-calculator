@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 
 import { BaseResistor } from '@resistor-calculator/utilities';
 
-import { ResistorBandConfig, BandValue } from '@resistor-calculator/types';
+import { ResistorConfig, BandValue } from '@resistor-calculator/types';
 
 /**
  * This custom hook will help you get the active indexes for the sidebar.
  * @param config the configuration object to claculate the resistor values.
  * @returns `{bandValues, setBandValues, resistorInfo}`.
  */
-export const useResistorCalculator = (config?: ResistorBandConfig[]) => {
+export const useResistorCalculator = (config?: ResistorConfig[]) => {
   const [bandValues, setBandValues] = useState<BandValue[]>([]);
 
   useEffect(() => {

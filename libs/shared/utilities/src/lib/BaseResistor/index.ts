@@ -1,9 +1,4 @@
-export type ResistorConfig = {
-  type: string;
-  values: Partial<{
-    [key: string]: string;
-  }>;
-};
+import { ResistorConfig } from '@resistor-calculator/types';
 
 export class BaseResistor {
   config: ResistorConfig[] | [];
@@ -19,14 +14,19 @@ export class BaseResistor {
       const currentBandColor = bandColors[idx];
 
       if (resistorValues[type]) {
-        resistorValues[
-          type
-        ] = `${resistorValues[type]}${values[currentBandColor]}`;
+        resistorValues[type] = `${resistorValues[type]}${
+          values[currentBandColor] ?? ''
+        }`;
       } else {
         resistorValues[type] = values[currentBandColor] ?? 'N/A';
       }
     });
 
-    return resistorValues;
+    const { significantValue, multiplier, ...rest } = resistorValues;
+
+    return {
+      resistance: significantValue + multiplier + ' Ω',
+      ...rest,
+    };
   }
 }
