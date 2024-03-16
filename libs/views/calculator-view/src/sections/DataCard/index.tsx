@@ -23,7 +23,7 @@ export const DataCard = ({ title, infoToDisplay }: DataCardProps) => {
         <Card.Body>
           {dataToDisplay.map(([key, value]) => (
             <div key={key}>
-              <span>{key}:</span>
+              <span className={cx('key-container')}>{key}:</span>
               <span>{value}</span>
             </div>
           ))}

@@ -1,6 +1,6 @@
-import { ResistorTypes, ResistorBandConfig } from '@resistor-calculator/types';
+import { ResistorTypes, ResistorConfig } from '@resistor-calculator/types';
 
-const CONFIG_MOCK: ResistorBandConfig[] = [
+const CONFIG_MOCK: ResistorConfig[] = [
   {
     type: 'significantValue',
     values: {
@@ -62,7 +62,7 @@ const CONFIG_MOCK: ResistorBandConfig[] = [
   },
 ];
 
-export const getResistorConfig = (bandNumber: string): ResistorBandConfig[] => {
+export const getResistorConfig = (bandNumber: string): ResistorConfig[] => {
   if (bandNumber === '4') {
     return CONFIG_MOCK;
   }

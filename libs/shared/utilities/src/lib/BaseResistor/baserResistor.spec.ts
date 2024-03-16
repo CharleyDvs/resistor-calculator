@@ -1,8 +1,8 @@
 import { BaseResistor } from '.';
 
-import { ResistorBandConfig } from '@resistor-calculator/types';
+import { ResistorConfig } from '@resistor-calculator/types';
 
-const CONFIG_MOCK: ResistorBandConfig[] = [
+const CONFIG_MOCK: ResistorConfig[] = [
   {
     type: 'significantValue',
     values: {
@@ -59,7 +59,7 @@ describe('BaseResistor', () => {
 
   it('creates a BaseResistor instance and correctly calculates the band values', () => {
     const bandValues = ['brown', 'black', 'violet']
-    const expectedResult = { significantValue: '10', multiplier: 'x10^7' }
+    const expectedResult = { resistance: '10x10^7 Ω' }
     const resistor = new BaseResistor(CONFIG_MOCK);
 
     const result = resistor.calculateValues(bandValues);

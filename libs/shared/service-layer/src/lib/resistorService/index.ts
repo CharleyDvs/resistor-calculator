@@ -4,9 +4,9 @@ import { instance as axios } from '../axiosInstance';
 
 import { CONFIG_URL, TYPES_URL } from '@resistor-calculator/constants';
 
-import { ResistorTypes, ResistorBandConfig } from '@resistor-calculator/types';
+import { ResistorTypes, ResistorConfig } from '@resistor-calculator/types';
 
-const getResistorConfig = async (bands: string): Promise<AxiosResponse<ResistorBandConfig[]>> => {
+const getResistorConfig = async (bands: string): Promise<AxiosResponse<ResistorConfig[]>> => {
   return axios.get(`/resistor${CONFIG_URL}/${bands}`);
 };
 
