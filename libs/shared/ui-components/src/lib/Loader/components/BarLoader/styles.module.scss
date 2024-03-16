@@ -1,0 +1,38 @@
+.bar-loader {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes bar-animation {
+  0% {
+    opacity: 0.8;
+    transform: scaleY(.8);
+  }
+  30% {
+    opacity: 0.6;
+    transform: scaleY(.6);
+  }
+  60% {
+    opacity: 0.4;
+    transform: scaleY(.4);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scaleY(.2);
+  }
+}
+
+@mixin bar($bar-number) {
+  @for $i from 1 through $bar-number {
+    .bar-#{$i} {
+      height: 20px;
+      width: 6px;
+      border-radius: 3px;
+      margin: 4px;
+      background: darkslategray;
+      animation: bar-animation $i * 300ms infinite linear alternate;
+    }
+  }
+}
+
+@include bar(4);
