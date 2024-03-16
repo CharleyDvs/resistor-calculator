@@ -1,10 +1,13 @@
+// TODO: Config to use an alias later and change import to @use
+@import "../../../../../../styles/tokens.module.scss";
+
 .tabs-trigger {
   border: none;
   background: none;
   padding: 6px 12px;
   cursor: pointer;
   position: relative;
-  color: rgba(0, 0, 0, .5);
+  color: $color-neutral-30;
   font-weight: 600;
 
   &::before,
@@ -20,7 +23,7 @@
     width: 1px;
     bottom: 25%;
     right: 0;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: $color-neutral-30;
   }
 
   &::after {
@@ -28,12 +31,12 @@
     width: 0%;
     bottom: -4px;
     left: 20%;
-    background-color: purple;
+    background-color: $color-primary-a-50;
   }
 
   &[data-state='active'] {
-    color: purple;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+    color: $color-primary-a-50;
+    text-shadow: 2px 2px 2px $color-neutral-20;
 
     &::after {
       width: 60%;

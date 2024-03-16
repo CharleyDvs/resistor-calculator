@@ -1,7 +1,10 @@
+// TODO: Config to use an alias later and change import to @use
+@import '../../../../styles/tokens.module.scss';
+
 .card {
   min-width: 200px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid $color-neutral-10;
   overflow: hidden;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px $color-neutral-20;
 }

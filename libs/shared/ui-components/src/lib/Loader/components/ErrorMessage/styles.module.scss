@@ -1,7 +1,10 @@
+// TODO: Config to use an alias later and change import to @use
+@import "../../../../../../styles/tokens.module.scss";
+
 .error-container {
   padding: 24px;
-  color: red;
-  border: 1px solid red;
-  background-color: rgba(red, 0.2);
+  color: $color-semantic-error-50;
+  border: 1px solid $color-semantic-error-50;
+  background-color: $color-semantic-error-10;
   border-radius: 6px;
 }
