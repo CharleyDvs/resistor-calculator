@@ -1,3 +1,5 @@
+// TODO: Config to use an alias later and change import to @use
+@import '../../../../../../styles/tokens.module.scss';
 
 .list-item {
   outline: none;
@@ -5,18 +7,17 @@
   align-items: center;
   justify-content: space-between;
   width: 200px;
-  background-color: #fff;
+  background-color: $color-neutral-0;
   padding: 4px 12px;
   cursor: pointer;
 
   &:hover {
-    background-color: #ff0;
+    background-color: $color-semantic-attention-50;
   }
 
   &.checked {
-    background-color: #0f0;
+    background-color: $color-semantic-success-50;
   }
-
 
   .color-display {
     border-radius: 2px;

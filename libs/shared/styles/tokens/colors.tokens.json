@@ -1,0 +1,61 @@
+{
+  "color": {
+    "primary": {
+      "a": {
+        "50": {
+          "value": "#58A399",
+          "type": "color"
+        }
+      }
+    },
+    "semantic": {
+      "error": {
+        "50": {
+          "value": "#FF204E",
+          "type": "color"
+        },
+        "10": {
+          "value": "#FFDFDF",
+          "type": "color"
+        }
+      },
+      "attention": {
+        "50": {
+          "value": "#EEE4B1",
+          "type": "color"
+        }
+      },
+      "success": {
+        "50": {
+          "value": "#4CCD99",
+          "type": "color"
+        }
+      }
+    },
+    "resistor-bg": {
+      "value": "blanchedalmond"
+    },
+    "neutral": {
+      "0": {
+        "value": "#eeeeee",
+        "type": "color"
+      },
+      "10": {
+        "value": "#dddddd",
+        "type": "color"
+      },
+      "20": {
+        "value": "#cccccc",
+        "type": "color"
+      },
+      "30": {
+        "value": "#bbbbbb",
+        "type": "color"
+      },
+      "50": {
+        "value": "#a3a3a3",
+        "type": "color"
+      }
+    }
+  }
+}

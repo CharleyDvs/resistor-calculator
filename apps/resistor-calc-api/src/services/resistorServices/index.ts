@@ -1,5 +1,6 @@
 import { ResistorTypes, ResistorConfig } from '@resistor-calculator/types';
 
+// TODO: Replace the mock values for a real DB
 const CONFIG_MOCK: ResistorConfig[] = [
   {
     type: 'significantValue',

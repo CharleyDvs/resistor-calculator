@@ -1,11 +1,14 @@
+// TODO: Config to use an alias later and change import to @use
+@import '../../../../styles/tokens.module.scss';
+
 .color-display-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 48px;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px $color-neutral-20;
+  border: 1px solid $color-neutral-20;
   margin-bottom: 12px;
   text-transform: capitalize;
 
@@ -23,6 +26,6 @@
     width: 20px;
     height: 20px;
     border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid $color-neutral-20;
   }
 }

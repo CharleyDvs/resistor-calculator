@@ -1,3 +1,6 @@
+// TODO: Config to use an alias later and change import to @use
+@import '../../../../../shared/styles/tokens.module.scss';
+
 .value-selector {
   grid-area: selector;
   display: flex;
@@ -16,9 +19,9 @@
     position: absolute;
     height: 10px;
     width: 52px;
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
-    border-left: 1px solid rgba(0, 0, 0, 0.3);
-    background-color: blanchedalmond;
+    border-right: 1px solid $color-neutral-30;
+    border-left: 1px solid $color-neutral-30;
+    background-color: $color-resistor-bg;
     pointer-events: none;
     left: 0;
   }
@@ -35,7 +38,7 @@
 .resistor-end {
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid $color-neutral-30;
   width: 60px;
   height: 60px;
   margin-bottom: 10px;
@@ -48,12 +51,12 @@
     height: 58px;
     width: 58px;
     border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    background-color: blanchedalmond;
+    border: 1px solid $color-neutral-30;
+    background-color: $color-resistor-bg;
   }
 
   &:last-of-type {
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid $color-neutral-30;
     border-bottom: none;
 
     &::after {

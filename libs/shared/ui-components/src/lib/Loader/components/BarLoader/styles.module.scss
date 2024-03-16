@@ -1,3 +1,6 @@
+// TODO: Config to use an alias later and change import to @use
+@import "../../../../../../styles/tokens.module.scss";
+
 .bar-loader {
   display: flex;
   justify-content: center;
@@ -29,7 +32,7 @@
       width: 6px;
       border-radius: 3px;
       margin: 4px;
-      background: darkslategray;
+      background: $color-neutral-50;
       animation: bar-animation $i * 300ms infinite linear alternate;
     }
   }
